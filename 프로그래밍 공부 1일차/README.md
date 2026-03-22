@@ -17,10 +17,11 @@ ctrl + S : save
 	style : change only spacing
 
 ` git remote add origin https://github.com/qkrwns1714s-web/study_repository.git ` : link my computer to git repository
-` git push -u origin main ` : upload to git, save name to origin
+` git push -u origin master ` : upload to git, save name to origin
 
 ` git config --global user.email "your_email@example.com" ` : set my email to git
 ` git config --global user.name "Your Name" ` : set my name to git
+` git reset --soft ` : reset my previous commit
 
 ## Python_grammer
 ### List
