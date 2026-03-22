@@ -16,7 +16,7 @@ ctrl + S : save
 	docs : change only documents
 	style : change only spacing
 
-` https://github.com/qkrwns1714s-web/study_repository.git ` : link my computer to git repository
+` git remote add origin https://github.com/qkrwns1714s-web/study_repository.git ` : link my computer to git repository
 ` git push -u origin main ` : upload to git, save name to origin
 
 ` git config --global user.email "your_email@example.com" ` : set my email to git
