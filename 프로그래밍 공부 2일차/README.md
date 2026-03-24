@@ -1,4 +1,5 @@
 # 오늘 배운 내용
+
 ## Tensor
 
 Data structure for PyTorch
@@ -18,6 +19,16 @@ make faster in Matrix calculator in GPU
 ` torch.tensor(encoded) ` : make encoded list to tensor
 ` ex_tensor.shape ` : tensor dimention
 ` ex_tensor.dtype` : Data type of tensor
+
+## Batching
+
+stack all tensor for two dimention, so every GPU can asess one tensor.
+
+make mini-batch, and train by avarage.
+
+## Embedding
+
+make tenser on coordinate
 
 ## Python grammer
 
