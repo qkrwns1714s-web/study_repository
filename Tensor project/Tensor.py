@@ -7,9 +7,9 @@ class SimpleDataLoader:
         self.block_size = block_size
 
     def get_batch(self):
-        random_start_point_list = torch.randint(len(data) - self.block_size, (self.batch_size, ))
-        question = torch.stack([data[i : i+self.block_size] for i in random_start_point_list])
-        answer = torch.stack([data[i+1 : i+self.block_size+1] for i in random_start_point_list])
+        random_start_point_list = torch.randint(len(self.data) - self.block_size, (self.batch_size, ))
+        question = torch.stack([self.data[i : i+self.block_size] for i in random_start_point_list])
+        answer = torch.stack([self.data[i+1 : i+self.block_size+1] for i in random_start_point_list])
         return question, answer
 
 if __name__ == "__main__":
