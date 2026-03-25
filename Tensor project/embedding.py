@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 from Tensor import SimpleDataLoader
 from tokenizer import SimpleTokenizer
 
@@ -20,9 +21,17 @@ class BigramlanguageModel(nn.Module):
             logits = logits.view(B*T, C)
             targets = targets.view(B*T)
             
-            import torch.nn.functional as F
             loss = F.cross_entropy(logits, targets)
         return logits, loss
+
+    def generate(self, encoded_num, max_new_tokens):
+        for _ in range(max_new_tokens):
+            logits, loss = self(encoded_num)
+            logits = logits[:, -1, :] 
+            probs = F.softmax(logits, dim=-1)
+            num_next = torch.multinomial(probs, num_samples=1)
+            encoded_num = torch.cat((encoded_num, num_next), dim=1)
+        return encoded_num
 
 if __name__ == "__main__":
     # make_data
@@ -36,3 +45,10 @@ if __name__ == "__main__":
 
     vocab_size = len(tokenizer.vocab)
     dimention = 32
+
+    #make model
+    model = BigramlanguageModel(vocab_size, dimention)
+    context = torch.zeros((1, 1), dtype=torch.long)
+    generated_indices = model.generate(context, max_new_tokens=100)
+    result_list = generated_indices[0].tolist()
+    print(tokenizer.decode(result_list))
