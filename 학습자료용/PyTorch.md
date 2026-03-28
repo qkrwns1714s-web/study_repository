@@ -1,7 +1,5 @@
-# 오늘 배운 내용
-
-# PyTorch
-
+#word
+[[Method]]
 make faster in Matrix calculator in GPU
 
 ` python -m pip install torch ` : install torch by terminal
@@ -23,15 +21,16 @@ make faster in Matrix calculator in GPU
 ` nn.linear(dimention, vocab_size)` : setting Weight and bias, prepare to calculate the Logits
 ` ex_logits.view(B*T, C) ` : make \[B]\[T]\[C] to \[BT]\[C] 
 ` self(encoded_num)` : doing Hook, \_\_call\_\_, and run forward. 
-
+` .parameters()` : bring all tensor in class.
 ### torch.nn.functional
 ` F.cross_entropy(logits, targets) ` : using [[Softmax]] and [[Negative Log-Likelihood]] for all logits 
 ` F.softmax(logits, dimention)` : softmax in all logits, if dimention is -1, it mean last dimention in logits.
 
-# Method
+## torch.optim
+library which is collecting study algorithm
+[[AdamW]]
+` torch.optim.AdamW(model.parameters(), lr=lr)` : make optimizer using AdamW 
 
-Ability which datatype have.
-`datatype.method()`
 
 
 
