@@ -11,10 +11,14 @@
             "id": "f5b88bda3e30652b",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "그래프 뷰"
+              "type": "markdown",
+              "state": {
+                "file": "AdamW.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AdamW"
             }
           }
         ]
@@ -173,11 +177,17 @@
       "daily-notes:오늘의 일일 노트 열기": false,
       "templates:템플릿 삽입": false,
       "command-palette:명령어 팔레트 열기": false,
-      "bases:새 베이스 생성하기": false
+      "bases:새 베이스 생성하기": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "f5b88bda3e30652b",
   "lastOpenFiles": [
+    "Momentum.md",
+    "AdamW.md",
+    "RMSprop.md",
+    "EMA.md",
+    "Batching.md",
     "Study about Computer Programming.md",
     "2026-03-29.md",
     "무제.base",
@@ -188,10 +198,6 @@
     "무제.canvas",
     "LaTeX.md",
     "무제 1.canvas",
-    "RMSprop.md",
-    "EMA.md",
-    "AdamW.md",
-    "Momentum.md",
     "Epochs.md",
     "PyTorch.md",
     "Bigram.md",
@@ -207,7 +213,6 @@
     "Logits.md",
     "Pasted image 20260324213251.png",
     "Tokenizer.md",
-    "real_code_about_Tokenizer.md",
     "Pasted image 20260322233740.png",
     "Memory",
     "HW",
